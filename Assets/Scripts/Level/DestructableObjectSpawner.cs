@@ -18,7 +18,7 @@ namespace CoolNamespace
             _offscreenPosition.z -= 100f;
             _rightBorder = playerCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, config.CameraHeight)).x;
 
-            _objectPool = new ObjectPool<DestructableObject>(assetProvider.DestructableObjects, objectContainer, 30);
+            _objectPool = new ObjectPool<DestructableObject>(assetProvider.DestructableObjects, 30, objectContainer);
             for (int i = 0; i < _objectPool.PooledObjects.Count; i++)
             {
                 (_objectPool.PooledObjects[i] as DestructableObject).OnObjectDestroyed +=

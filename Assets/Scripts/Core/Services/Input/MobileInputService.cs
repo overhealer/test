@@ -13,7 +13,7 @@ namespace CoolNamespace
 
         public MobileInputService(MainUI ui)
         {
-            _movementJoystick = ui.MovementJoystick;
+            //_movementJoystick = ui.MovementJoystick;
         }
     }
 }

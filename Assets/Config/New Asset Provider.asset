@@ -15,9 +15,11 @@ MonoBehaviour:
   LevelDatabase: {fileID: 11400000, guid: 3c00d22f921c1bf45965abf381fc0dab, type: 2}
   PlayerPrefab: {fileID: 6649715277484287974, guid: 2779837078548864790ab3f5b31682a2,
     type: 3}
+  PlayerProjectile: {fileID: 4468477105117357718, guid: d2cccf4aff8144b428bcf16da5b9b24d,
+    type: 3}
   DestructableObjects:
-  - {fileID: 1736646087662340420, guid: 81b2eaedc49446a43af3fbf96931c985, type: 3}
-  - {fileID: 4672029593362568439, guid: 289eec05070a48a40a0b65bf66e5f0b7, type: 3}
-  - {fileID: 62680270280500634, guid: ee6dac0a338482c4c8de7f189ceb91c5, type: 3}
-  - {fileID: 8357499067581474392, guid: 7db891bd273bb9947b1e991d530a26f1, type: 3}
-  - {fileID: 1495936041373501488, guid: e6ee7f39f87411845918e33071ad67d6, type: 3}
+  - {fileID: -7527340859434748627, guid: 81b2eaedc49446a43af3fbf96931c985, type: 3}
+  - {fileID: -3689962964458510610, guid: 289eec05070a48a40a0b65bf66e5f0b7, type: 3}
+  - {fileID: 6032558845673929671, guid: ee6dac0a338482c4c8de7f189ceb91c5, type: 3}
+  - {fileID: -1496716936150396024, guid: 7db891bd273bb9947b1e991d530a26f1, type: 3}
+  - {fileID: -2631696379513721282, guid: e6ee7f39f87411845918e33071ad67d6, type: 3}

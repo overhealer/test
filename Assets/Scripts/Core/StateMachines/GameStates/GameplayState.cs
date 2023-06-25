@@ -8,20 +8,24 @@ namespace CoolNamespace
     {
         private AssetProvider _assetProvider;
         private GameConfig _gameConfig;
+        private MainUI _mainUI;
 
         private Level _currentLevel;
-        private Player _player;
+        private PlayerShip _player;
 
-        public GameplayState(AssetProvider assetProvider, GameConfig gameConfig)
+        public GameplayState(AssetProvider assetProvider, GameConfig gameConfig, MainUI ui)
         {
             _assetProvider = assetProvider;
             _gameConfig = gameConfig;
+            _mainUI = ui;
         }
 
         public void Enter()
         {
             InitLevel();
             InitPlayer();
+            _mainUI.DisableAllPanels();
+            _mainUI.EnablePanel<HUDPanel>();
         }
 
         public void Exit()
@@ -44,7 +48,7 @@ namespace CoolNamespace
         private void InitPlayer()
         {
             _player = GameObject.Instantiate(_assetProvider.PlayerPrefab);
-            _player.Init(ServiceContainer.Instance.Get<InputService>(), Camera.main, _gameConfig);
+            _player.Init(ServiceContainer.Instance.Get<InputService>(), Camera.main, _gameConfig, _assetProvider, _mainUI);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace CoolNamespace
 {
     public class GameBootstrapState : State, IState
     {
-        private StateMachine _gameStateMachine;
+        private GameStateMachine _gameStateMachine;
         private AssetProvider _assetProvider;
         private MainUI _mainUI;
         private GameConfig _gameConfig;
@@ -22,6 +22,7 @@ namespace CoolNamespace
         public void Enter()
         {
             SetupServices();
+            _mainUI.InitPanels(_gameStateMachine);
             LoadLevelPayload payload = new LoadLevelPayload("Menu", () => _gameStateMachine.Enter<MenuState>());
             _gameStateMachine.Enter<LoadLevelState, LoadLevelPayload>(payload);
         }

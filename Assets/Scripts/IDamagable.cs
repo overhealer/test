@@ -6,6 +6,8 @@ namespace CoolNamespace
 {
     public interface IDamagable
     {
+        public bool IsAlive { get; }
+
         public void Damage(float damageAmount);
     }
 }

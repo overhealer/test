@@ -8,6 +8,7 @@ namespace CoolNamespace
     public class GameConfig : ScriptableObject
     {
         public float PlayerMoveSpeed;
+        public float PlayerAttackSpeed;
         public float CameraHeight = 150f;
     }
 }

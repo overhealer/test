@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065365363639599148}
-  - component: {fileID: 62680270280500634}
+  - component: {fileID: 295311706351956859}
+  - component: {fileID: 6032558845673929671}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Untagged
@@ -31,9 +32,30 @@ Transform:
   m_Children:
   - {fileID: 5323688560821044513}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &62680270280500634
+--- !u!135 &295311706351956859
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870522783387030100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6032558845673929671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,9 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1870522783387030100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f807bbd07b7aa554e939d89b87ef5ba5, type: 3}
+  m_Script: {fileID: 11500000, guid: 366256f2d57a1fa47ad4cfab88c02bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 4
 --- !u!1 &5481458129096555881
 GameObject:
   m_ObjectHideFlags: 0

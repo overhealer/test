@@ -13,7 +13,7 @@ namespace CoolNamespace
                 [typeof(GameBootstrapState)] = new GameBootstrapState(assetProvider, ui, this, gameConfig),
                 [typeof(LoadLevelState)] = new LoadLevelState(this),
                 [typeof(MenuState)] = new MenuState(this),
-                [typeof(GameplayState)] = new GameplayState(assetProvider, gameConfig),
+                [typeof(GameplayState)] = new GameplayState(assetProvider, gameConfig, ui),
             };
         }
     }

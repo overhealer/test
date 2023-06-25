@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: New Game Config
   m_EditorClassIdentifier: 
   PlayerMoveSpeed: 3.5
+  PlayerAttackSpeed: 0.5
   CameraHeight: 150

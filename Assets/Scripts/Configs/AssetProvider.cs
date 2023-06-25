@@ -9,7 +9,8 @@ namespace CoolNamespace
     {
         public LevelDatabase LevelDatabase;
 
-        public Player PlayerPrefab;
+        public PlayerShip PlayerPrefab;
+        public Projectile PlayerProjectile;
 
         public DestructableObject[] DestructableObjects;
     }

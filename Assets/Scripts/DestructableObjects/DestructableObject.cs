@@ -8,8 +8,9 @@ namespace CoolNamespace
     public class DestructableObject : PoolObject, IDamagable
     {
         public Action<DestructableObject> OnObjectDestroyed;
+        [SerializeField] private float _health = 5;
 
-        private float _health;
+        public bool IsAlive => _health > 0;
 
         public void UpdateMove()
         {

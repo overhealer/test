@@ -8,14 +8,32 @@ namespace CoolNamespace
     {
         public List<TPoolObject> PooledObjects, ActiveObjects;
 
-        public ObjectPool(TPoolObject[] poolObject, Transform container, int poolLength)
+        public ObjectPool(TPoolObject[] poolObject, int poolLength, Transform container = null)
         {
             PooledObjects = new List<TPoolObject>(poolLength);
             ActiveObjects = new List<TPoolObject>();
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < poolLength; i++)
             {
-                PoolObject o = GameObject.Instantiate(poolObject[Random.Range(0, poolObject.Length)] as PoolObject, container);
+                PoolObject o = GameObject.Instantiate(poolObject[Random.Range(0, poolObject.Length)] as PoolObject);
+                if (container)
+                    o.transform.SetParent(container);
+
+                o.gameObject.SetActive(false);
+                PooledObjects.Add((TPoolObject)(object)o);
+            }
+        }
+
+        public ObjectPool(TPoolObject poolObject, int poolLength, Transform container = null)
+        {
+            PooledObjects = new List<TPoolObject>(poolLength);
+            ActiveObjects = new List<TPoolObject>();
+
+            for (int i = 0; i < poolLength; i++)
+            {
+                PoolObject o = GameObject.Instantiate(poolObject as PoolObject);
+                if (container)
+                    o.transform.SetParent(container);
 
                 o.gameObject.SetActive(false);
                 PooledObjects.Add((TPoolObject)(object)o);
